@@ -1,0 +1,221 @@
+html {
+    width: 100%;
+    height: 100%;
+
+    body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        max-width: 1920px;
+        max-height: 1000px;
+        margin: auto;
+        overflow: hidden;
+
+        main {
+            padding: 60px 0;
+
+            .maintain {
+                width: 620px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto 40px;
+                position: relative;
+                transition: all 0.5s;
+
+                // logo
+                .logo {
+                    width: 223px;
+                    height: 174px;
+                    margin-right: 30px;
+                    animation: top 1s linear 0.2s 1;
+                    animation-fill-mode: backwards;
+
+                    >img {
+                        object-fit: contain;
+                    }
+                }
+
+                // text
+                .maintainTextBox {
+                    flex-shrink: 0;
+                    animation: top 1s linear 0.2s 1;
+                    animation-fill-mode: backwards;
+
+                    @keyframes top {
+        
+                        0% {
+                            opacity: 0;
+                        }
+    
+                        50% {
+                            opacity: 0.8;
+                        }
+    
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+
+                    .maintainText {
+                        font-weight: bold;
+
+                        &.maintainText--en {
+                            color: #be9462;
+                            font-size: 20px;
+                            margin-bottom: 17px;
+                        }
+
+                        &.maintainText--ch {
+                            color: #252525;
+                            font-family: 'myCustomFont';
+
+                            &.maintainText--ch__top {
+                                font-size: 64px;
+                                margin-bottom: 17px;
+                            }
+
+                            &.maintainText--ch__bottom {
+                                font-size: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .maintainInfo {
+                color: #252525;
+                font-size: 24px;
+                text-align: center;
+                animation: info 2s linear 1s infinite;
+                animation-fill-mode: backwards;
+
+                @keyframes info {
+    
+                    0% {
+                        opacity: 0;
+                    }
+
+                    50% {
+                        opacity: 1;
+                    }
+
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .land {
+                width: 499px;
+                height: 335px;
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                animation: bounceY 8s linear 2s infinite,opacity1 2s linear 2s 1;
+                animation-fill-mode: backwards;
+                z-index: -1;
+
+                @keyframes opacity1 {
+                    0% {
+                        opacity: 0;
+                    }
+                    50% {
+                        opacity: 0.8;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes bounceY {
+    
+                    0% {
+                        transform: translate(-50%,-50%);
+                    }
+
+                    30% {
+                        transform: translate(-50%,-40%);
+                    }
+
+                    50% {
+                        transform: translate(-50%,-50%);
+                    }
+
+                    70% {
+                        transform: translate(-50%,-40%);
+                    }
+
+                    100% {
+                        transform: translate(-50%,-50%);
+                    }
+                }
+
+                .tool {
+                    width: 415px;
+                    height: 178px;
+                    position: absolute;
+                    top: 26px;
+                    left: 92px;
+                    animation-fill-mode: backwards;
+                }
+            }
+            .shadow {
+                width: 412px;
+                height: 119px;
+                position: absolute;
+                top: 800px;
+                left: 50%;
+                animation: shadow 8s linear 2s infinite;
+                animation-fill-mode: backwards;
+                z-index: -2;
+    
+                @keyframes shadow {
+    
+                    0% {
+                        transform: translate(-50%,-50%);
+                        opacity: 0;
+                    }
+                    30% {
+                        transform: translate(-50%,-50%);
+                        opacity: 1;
+                    }
+                    50% {
+                        transform: translate(-50%,-50%);
+                        opacity: 0.5;
+                    }
+
+                    70% {
+                        transform: translate(-50%,-50%);
+                        opacity: 1;
+                    }
+
+                    100% {
+                        transform: translate(-50%,-50%);
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .light {
+                width: 1101px;
+                height: 956px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: -3;
+            }
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -99;
+        }
+    }
+}
