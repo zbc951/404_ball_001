@@ -1,24 +1,23 @@
 body .bg {
-    background: url('../img/bg.png') no-repeat  center;
-    background-size: cover;
+    background: url('../img/bg.png') no-repeat top center;
 }
 
-body main .land {
+body .container .land {
     background: url('../img/footBall.png') no-repeat center;
     background-size: contain;
 }
-body main .land .tool {
+body .container .land .tool {
     background: url('../img/toolpng.png') no-repeat center;
     background-size: contain;
 }
 
-body main .light {
+body .container .light {
     background: url('../img/light.png') no-repeat center;
     background-size: contain;
 }
 
 
-body main .shadow{
+body .container .shadow{
     background: url('../img/sd.png') no-repeat center;
     background-size: contain;
 }

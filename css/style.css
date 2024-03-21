@@ -112,26 +112,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
   src: url("../font/MFinance HK Bold(盈富體).ttf") format("truetype");
 }
 body .bg {
-  background: url("../img/bg.png") no-repeat center;
-  background-size: cover;
+  background: url("../img/bg.png") no-repeat top center;
 }
 
-body main .land {
+body .container .land {
   background: url("../img/footBall.png") no-repeat center;
   background-size: contain;
 }
 
-body main .land .tool {
+body .container .land .tool {
   background: url("../img/toolpng.png") no-repeat center;
   background-size: contain;
 }
 
-body main .light {
+body .container .light {
   background: url("../img/light.png") no-repeat center;
   background-size: contain;
 }
 
-body main .shadow {
+body .container .shadow {
   background: url("../img/sd.png") no-repeat center;
   background-size: contain;
 }
@@ -150,10 +149,14 @@ html body {
   margin: auto;
   overflow: hidden;
 }
-html body main {
+html body .container {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
   padding: 60px 0;
 }
-html body main .maintain {
+html body .container .maintain {
   width: 620px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,7 +172,7 @@ html body main .maintain {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-html body main .maintain .logo {
+html body .container .maintain .logo {
   width: 223px;
   height: 174px;
   margin-right: 30px;
@@ -178,60 +181,38 @@ html body main .maintain .logo {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-html body main .maintain .logo > img {
+html body .container .maintain .logo > img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-html body main .maintain .maintainTextBox {
+html body .container .maintain .maintainTextBox {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -webkit-animation: top 1s linear 0.2s 1;
-          animation: top 1s linear 0.2s 1;
+  -webkit-animation: top1 1s linear 0.2s 1;
+          animation: top1 1s linear 0.2s 1;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-@-webkit-keyframes top {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes top {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-html body main .maintain .maintainTextBox .maintainText {
+html body .container .maintain .maintainTextBox .maintainText {
   font-weight: bold;
 }
-html body main .maintain .maintainTextBox .maintainText.maintainText--en {
+html body .container .maintain .maintainTextBox .maintainText.maintainText--en {
   color: #be9462;
   font-size: 20px;
   margin-bottom: 17px;
 }
-html body main .maintain .maintainTextBox .maintainText.maintainText--ch {
+html body .container .maintain .maintainTextBox .maintainText.maintainText--ch {
   color: #252525;
   font-family: "myCustomFont";
 }
-html body main .maintain .maintainTextBox .maintainText.maintainText--ch.maintainText--ch__top {
+html body .container .maintain .maintainTextBox .maintainText.maintainText--ch.maintainText--ch__top {
   font-size: 64px;
   margin-bottom: 17px;
 }
-html body main .maintain .maintainTextBox .maintainText.maintainText--ch.maintainText--ch__bottom {
+html body .container .maintain .maintainTextBox .maintainText.maintainText--ch.maintainText--ch__bottom {
   font-size: 40px;
 }
-html body main .maintainInfo {
+html body .container .maintainInfo {
   color: #252525;
   font-size: 24px;
   text-align: center;
@@ -239,6 +220,83 @@ html body main .maintainInfo {
           animation: info 2s linear 1s infinite;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+html body .container .land {
+  width: 499px;
+  height: 335px;
+  position: absolute;
+  top: 530px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: bounceY 8s linear 2s infinite, opacity1 2s linear 2s 1;
+          animation: bounceY 8s linear 2s infinite, opacity1 2s linear 2s 1;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  z-index: -1;
+}
+html body .container .land .tool {
+  width: 415px;
+  height: 178px;
+  position: absolute;
+  top: 26px;
+  left: 92px;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+html body .container .shadow {
+  width: 412px;
+  height: 119px;
+  position: absolute;
+  top: 800px;
+  left: 50%;
+  -webkit-animation: shadow 8s linear 2s infinite;
+          animation: shadow 8s linear 2s infinite;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  z-index: -2;
+}
+html body .container .light {
+  width: 1101px;
+  height: 956px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -3;
+}
+html body .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+
+@-webkit-keyframes top1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes top1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @-webkit-keyframes info {
   0% {
@@ -261,20 +319,6 @@ html body main .maintainInfo {
   100% {
     opacity: 0;
   }
-}
-html body main .land {
-  width: 499px;
-  height: 335px;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-animation: bounceY 8s linear 2s infinite, opacity1 2s linear 2s 1;
-          animation: bounceY 8s linear 2s infinite, opacity1 2s linear 2s 1;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  z-index: -1;
 }
 @-webkit-keyframes opacity1 {
   0% {
@@ -342,27 +386,6 @@ html body main .land {
             transform: translate(-50%, -50%);
   }
 }
-html body main .land .tool {
-  width: 415px;
-  height: 178px;
-  position: absolute;
-  top: 26px;
-  left: 92px;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-}
-html body main .shadow {
-  width: 412px;
-  height: 119px;
-  position: absolute;
-  top: 800px;
-  left: 50%;
-  -webkit-animation: shadow 8s linear 2s infinite;
-          animation: shadow 8s linear 2s infinite;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  z-index: -2;
-}
 @-webkit-keyframes shadow {
   0% {
     -webkit-transform: translate(-50%, -50%);
@@ -416,22 +439,4 @@ html body main .shadow {
             transform: translate(-50%, -50%);
     opacity: 0;
   }
-}
-html body main .light {
-  width: 1101px;
-  height: 956px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: -3;
-}
-html body .bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -99;
 }
