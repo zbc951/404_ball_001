@@ -176,8 +176,8 @@ html body .container .maintain .logo {
   width: 223px;
   height: 174px;
   margin-right: 30px;
-  -webkit-animation: top 1s linear 0.2s 1;
-          animation: top 1s linear 0.2s 1;
+  -webkit-animation: top1 1s linear 0.2s 1;
+          animation: top1 1s linear 0.2s 1;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
